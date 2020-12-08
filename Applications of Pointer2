@@ -1,0 +1,17 @@
+//Passing large objects(avoid copying)
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+void processvector(vector<int>*v)
+{
+
+}
+int main()
+{
+    vector<int>v
+    for(int i=0;i<1000;i++)
+    v.pushback(i);
+    processvector(&v);
+    return 0;
+}

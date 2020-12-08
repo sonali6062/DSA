@@ -1,0 +1,36 @@
+/*Used for accessing array elements
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+    int arr[] = {10,20,30,40,50};
+    int *ptr = arr;
+    cout<<*(ptr+3);//O\P-->40
+
+}
+*/
+
+
+
+//Array in C & C++ are always passed by passing the address & address is stored in arr name that is always received in a function as a pointer
+#include<iostream>
+#include<cmath>
+using namespace std;
+void fun(int *ptr,int n)
+{
+    for(int i = 0;i<n;i++)
+    cout<<ptr[i]<<"  ";//O\P--> 10 20 30 40
+}
+int main()
+{
+    int arr[] = {10,20,30,40};
+    fun(arr,4);//(arr,size of arr)
+    cout<<"\n"<<arr[2];//O\P--> 30
+    return 0;
+}
+/*  NOTE: 
+        **ptr[i] or arr[2] is converted into *(ptr+i) or (arr+2) by compiler
+        **int *ptr can be written as int ptr[]
+*/
