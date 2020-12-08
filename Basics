@@ -1,0 +1,11 @@
+//use of & and *
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+    int x = 10;
+    cout<<(&x);//& gives the address of the variable when used before a variable name while not declaring it 
+    cout<<"  "<<*(&x);//* gives the value of the address
+    return 0;
+}
