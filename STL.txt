@@ -1,0 +1,86 @@
+It provides library for  basic implementation of Data Structure and Algorithm..
+Template  is a file that serves as a starting point for a new document. It can be used for any Data type.
+
+**Containers are basic implementation of basic standard Data Structure like stack, hash table, queue...
+
+Containers
+     |_.. Simple: pair,vector,forward list,lists
+     |
+     |_.. Container Addapter: stack,queue,priority queue
+     |
+     |_.. Associative: set,map,unordered set,unordered map
+
+**Algorithms are implementation of basic data structures like linear search,sorting,...
+
+Algorithms: Binary search, find, reverse, sorting
+
+
+**pair--> pair of two elements can be used to represent  things like time interval, a point in 2-D..
+
+**vector
+        |_..vectors a dynamic sized array 
+        |_..It provides many standard functions 
+        |_..Has the ability to resize automatically when an element is inserted or deleted from the array
+
+**forward list--> Simple linked list
+**list--> Double linked list
+**Container Adapter--> Use simple containers as underlying Data Structure and build a interface on it(ACT LIKE BASE)
+
+**stack--> Allows insertion and deletion from same end(FROM LAST)
+**queue--> Allows insertion from one end & deletion  from other end
+**priority queue--> Allows insertion and deletion based on it's priority
+
+**Associative Containers---> Self balancing binary search tree which are implemented as set,map,multi_set and #table
+
+**set--> Simple key items
+**map--> Collection of key value pair
+**unordered--> Group of class templates in the C++ standard library that implement #table variant
+              (unordered_set, unordered_map, unordered_multiset, unordered_map)
+
+**ordered--> Normal set and map are ordered. They are represented as SELF BALANCING BINARY SEARCH TREE 
+
+BASIC IDEA BETWEEN STL::
+           * Containers are mainly based on the concept of templates.
+           * We have 1 stack class that is templated class.
+           * Takes Data Types as an argument(Can make stack of our own DataType)
+
+**Algorithms use the concept of iterators(used in containers to access individual items of a containers)
+                                  |_.. Gives address of individual items of a containers
+
+[begin(),end()]
+     |_.. begin()-->begin address given by a begin function except pair
+     |_.. end()-->special address that gives address of element beyond last element
+     
+      ______________          _______
+     |   |    |    |.........|   |   |
+     |___|____|____|.........|___|___|
+       |                         |
+    begin()                     end()
+
+      ______________          _______
+     |   |    |    |.........|   |   | __.arr+n
+     |___|____|____|.........|___|___|
+       |                       |
+      arr                   arr+n-1
+
+      end() gives address of arr+n
+
+
+
+EXAMPLE::::
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+    int arr[] = {10,20,25,5,15,30};
+    sort(arr,arr+6);//Sorts the array-->{5,10,15,20,25,30}
+    for(int i=0;i<6;i++)
+    cout<<arr[i]<<" ";//O\P-->{5,10,15,20,25,30}
+    cout<<endl;
+    if(binary_search(arr,arr+6,20))
+       cout<<"Present";//Present
+    else 
+       cout<<"Not Present";
+    return 0;
+}
