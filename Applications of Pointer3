@@ -1,0 +1,33 @@
+//Pointers are used for dynamic memory allocation
+/*Implementing data structure like linked list,tree,BST,etc (Address to be stored)
+    A------->B(store address of A in B)
+    A------->C
+    B------->D and E
+    C------->F
+                A
+               / \
+               B  C 
+              / \  \
+              D  E  F 
+    Reference can't be used*/
+//To do system level programming
+//TO return multiple values
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+void getAddMul(int x, int y,int *mptr, int *aptr)
+{
+    *mptr = x*y;
+    *aptr = x+y;
+
+}
+int main()
+{
+    int x = 10,y = 20,a,m;
+    getAddMul(x,y,&a,&m);
+    cout<<a<<"  "<<m;//O\P--> 200    30
+    return 0;
+}
+
+
