@@ -1,0 +1,32 @@
+**Background for analysis of algorithm
+
+QUESTION:
+      Find the sum of first n  natural numbers.
+      1st method:                                   
+          int function1(int n)
+          {
+              return n*(n+1)/2;//function1()=C1
+          }
+
+    2nd method:
+          int function2(int n)
+          {
+              int sum=0;
+              for(int i=1;i<=n;i++)//function2()=C2n+C3
+              sum=sum+1;
+              return sum;
+          }
+
+    3rd mathod:
+         int function3(int n)
+         {
+             int sum=0;
+             for(int i=1;i<=n;i++)
+                for(j=1;j<=i;j++)//function3()=C4n^2+ C5n+C6
+                sum++;
+            return sum;
+         }
+
+
+**ASSYMPTOTIC ANALYSIS: Measures order of growth of a program or algorithm in terms of input size.
+
